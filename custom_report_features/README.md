@@ -11,4 +11,4 @@ Pablo de Andrés
 - The other 3 will be equal (SOL suffix) but with different header (Image) and footer information (field: report_footer_bunit2)
 - Customizes 'web.external_layout_bold' template
 
-![Logo](https://github.com/papulo79/odoo_15/blob/main/custom_report_features/static/src/img/pda_logo.png?raw=true)
+![How it looks](https://github.com/papulo79/odoo_15/blob/main/custom_report_features/static/src/img/custom_report_features_v15.png?raw=true)

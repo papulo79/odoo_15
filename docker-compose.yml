@@ -21,10 +21,6 @@ services:
     volumes:
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
-      - ./doc-odoo:/mnt/doc-odoo-addons
-      - ./astra/Cybrosys/HR:/mnt/Cybrosys
-      - ./astra/OCA:/mnt/oca-addons
-      - ./astra/internal_project:/mnt/internal-project
       - ./OCA:/mnt/oca
       - ./filestore:/root/.local/share/Odoo/filestore:rw,z
     networks:

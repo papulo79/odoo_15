@@ -1,0 +1,8 @@
+debugpy
+cachetools
+validators
+random_user_agent
+
+zeep
+requests
+pyOpenSSL

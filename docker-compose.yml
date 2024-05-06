@@ -1,0 +1,53 @@
+version: '3'
+services:
+  odoo:
+    build: .
+    container_name: odoo15
+    restart: unless-stopped
+    command: >
+      /usr/bin/python3 -m debugpy --listen 0.0.0.0:3000 /usr/bin/odoo
+      -d astra
+      -i muk_web_theme,account_asset_management,report_xlsx_helper
+      --dev=all
+      --db_user=odoo
+      --db_host=db
+      --db_password=odoo
+      --load-language=es_ES
+    depends_on:
+      - db
+    ports:
+      - "8015:8069"
+      - "3015:3000"
+    volumes:
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+      - ./doc-odoo:/mnt/doc-odoo-addons
+      - ./astra/Cybrosys/HR:/mnt/Cybrosys
+      - ./astra/OCA:/mnt/oca-addons
+      - ./astra/internal_project:/mnt/internal-project
+      - ./OCA:/mnt/oca
+      - ./filestore:/root/.local/share/Odoo/filestore:rw,z
+    networks:
+      - net
+  db:
+    image: postgres:latest
+    container_name: odoo15-db
+    restart: unless-stopped
+    ports:
+      - "5415:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db:/var/lib/postgresql/data
+    networks:
+      - net
+
+volumes:
+  odoo-web:
+  odoo-db:
+
+networks:
+  net:

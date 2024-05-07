@@ -8,20 +8,12 @@
             "port": 3015,
             "pathMappings": [
                 {
-                    "localRoot": "${workspaceFolder}/astra/internal_project",
+                    "localRoot": "${workspaceFolder}/internal_project",
                     "remoteRoot": "/mnt/internal-project"
                 },
                 {
-                    "localRoot": "${workspaceFolder}/astra/Cybrosys/HR",
-                    "remoteRoot": "/mnt/Cybrosys"
-                },
-                {
-                    "localRoot": "${workspaceFolder}/astra/OCA",
+                    "localRoot": "${workspaceFolder}/OCA",
                     "remoteRoot": "/mnt/oca-addons"
-                },
-                {
-                    "localRoot": "${workspaceFolder}/doc-odoo",
-                    "remoteRoot": "/mnt/doc-odoo-addons"
                 },
                 {
                     "localRoot": "${workspaceFolder}/addons",

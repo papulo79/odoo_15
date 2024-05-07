@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Odoo docker debug 15",
+            "type": "python",
+            "request": "attach",
+            "port": 3015,
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/astra/internal_project",
+                    "remoteRoot": "/mnt/internal-project"
+                },
+                {
+                    "localRoot": "${workspaceFolder}/astra/Cybrosys/HR",
+                    "remoteRoot": "/mnt/Cybrosys"
+                },
+                {
+                    "localRoot": "${workspaceFolder}/astra/OCA",
+                    "remoteRoot": "/mnt/oca-addons"
+                },
+                {
+                    "localRoot": "${workspaceFolder}/doc-odoo",
+                    "remoteRoot": "/mnt/doc-odoo-addons"
+                },
+                {
+                    "localRoot": "${workspaceFolder}/addons",
+                    "remoteRoot": "/mnt/extra-addons"
+                },
+            ],
+            "logToFile": true,
+        }, 
+    ]
+}
